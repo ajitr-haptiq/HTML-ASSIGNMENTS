@@ -1,9 +1,11 @@
+*{
+    box-sizing: border-box;
+}
+
 body{
     padding: 0;
     margin: 0;
     font-family: "Heebo", sans-serif;
-   
-
 }
 
 /* header */
@@ -42,12 +44,17 @@ body{
     margin: 0 auto;
 } */
 .wrapperHeroImage{
-    margin: 0 auto;
-    width: 1170px;
-    height: 50vh;
+    max-width: 1170px;
+    margin:  0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    height: 100vh;
     display: flex;
     justify-content: space-between;
     margin-top: 170px;
+
 }
 .containerHero{
     width:  506px;
@@ -73,7 +80,7 @@ body{
     width: 208px;
     height: 47px;
     font-size: 20px;
-    font-weight: 29.38px;
+    line-height: 29.38px;
     font-weight: 500;
     text-align: center;
     border: none;
@@ -94,6 +101,7 @@ body{
 
 /* posts */
 .wrapperPosts{
+    width: 100%;
     background-color:#EDF7FA ;
 }
 
@@ -122,11 +130,11 @@ ul:nth-child(1){
 
 /* wrapperCards */
 .wrapperCards{
-   display: flex;
-   justify-content: space-between;
+    display: flex;
     width: 1170px;
-    height: 396px;
     margin: 0 auto;
+    gap: 20px;
+    padding: 20px;
 }
 .wrapperCards a{
     text-decoration: none;
@@ -136,8 +144,6 @@ ul:nth-child(1){
 .card{
     padding: 25px;
     background-color: #FFFFFF;
-    width: 418px;
-    height: 295px;
     border-radius: 4px;
     box-shadow: 0 4px 8px rgba(187, 225, 250, 0.25);
 }
@@ -146,8 +152,8 @@ ul:nth-child(1){
     transition: box-shadow 0.3s ease, transform 0.2s ease;
 }
 .card h3{
-    width: 374px;
-    height: 85px;
+    /* width: 374px; */
+    /* height: 85px; */
     font-weight: 700;
     font-size: 26px;
     line-height: 38.19px;
@@ -169,8 +175,8 @@ ul:nth-child(1){
     font-weight: 400;
 }
 .card p{
-    width: 368px;
-    height: 117px;
+    /* width: 368px; */
+    /* height: 117px; */
     color: #21243D;
     font-weight: 400px;
     font-size: 16px;
@@ -185,7 +191,7 @@ ul:nth-child(1){
     background-color: #ffff;
 }
 
-.feturedW h3{
+.feturedW h2{
     font-size: 22px;
     line-height: 60px;
     font-weight: 400;
@@ -254,11 +260,13 @@ footer{
     width: 1170px;
     height: 182px;
     margin: 0 auto;
+    display: block;
+    
 
 }
 
 .footerSection{
-    display: flex;
+
    justify-content: center;
    gap: 35px;
    margin-bottom:20px;
@@ -278,15 +286,15 @@ footer p{
 
 @media (max-width:768px){
     body{
-        background-color: red;
+        background-color: #00A8CC;
+        width: 100%;
     }
 
     .header{
-        display: flex;
-        /* align-items: center; */
-        margin: 0 auto;
+        display: none;
+        
         justify-content: space-between;
-        width: 750px;
+        width: 768px;
         height: 35px;
     }
     .header ul li{
@@ -296,16 +304,89 @@ footer p{
      }
 
      .wrapperHeroImage{
-        justify-content: center;
-        flex-direction: column-reverse;
-        margin-top: 100px;
-    }
-    .containerImage img{
-        margin: 0;
+        width: 100%;
         display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
         justify-content: center;
+        margin-bottom: 50px;
+        margin-top: 0%;
+    }
+   
+    .containerHero h1{
+        width:  100%;
+        height: 120px;
+        text-align: center;
+        margin:30px auto;
+        margin-bottom: 70px;
+    }
+
+    .containerHero p{   
+        width: 358px;
+        text-align: center;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 23.5px;
+        color: #21243D;
+        margin:30px auto;
         
     }
+    .wrapperPosts{  
+        width: 100%;
+        flex-direction: column;
+    }
+    .postNav ul:nth-last-child(1) a{
+        display: none;
+    }
+    .postNav ul:nth-last-child(1):nth-child(1){
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      
+    }
+   
+   
+  
+    
+    .wrapperCards{
+        height: fit-content;
+        gap: 20px;
+        width: 100%;
+        margin-bottom: 50px;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .card{
+        
+        max-width: 100%;
+    }
+
+    .feturedW h2{
+        width: 768px;
+        justify-content: center;
+        text-align: center;
+    }
+
+
+    .wrapperContainer{
+        width: 768px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    .image img {
+        width: 100%;
+    }
+    .content{
+       align-items: center;
+    }
+
+  
+    
 
 }
 
