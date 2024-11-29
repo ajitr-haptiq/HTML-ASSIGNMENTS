@@ -1,5 +1,7 @@
 *{
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 body{
@@ -7,15 +9,29 @@ body{
     margin: 0;
     font-family: "Heebo", sans-serif;
 }
+a{
+    text-decoration: none;
+    color: #000000;
+}
 
 /* header */
 
-.header{
+.hamburger{
+    display: none;
+}
+.wrapperNavHead{
     display: flex;
     align-items: center;
     margin: 0 auto;
     justify-content: space-between;
     width: 1170px;
+}
+
+.wrapperNavHead h2 a:hover{
+    color: #FF6464;
+}
+.wrapperNavHead li a:hover{
+    color: #FF6464;
 }
 
 .header ul li{
@@ -34,7 +50,6 @@ body{
     font-size: 20px;
     line-height: 29.38px;
     text-align: right   ;
-    color: #000000;
     text-decoration: none;
 }
 
@@ -43,37 +58,35 @@ body{
 /* main{
     margin: 0 auto;
 } */
-.wrapperHeroImage{
+ .container{
     max-width: 1170px;
     margin:  0 auto;
     padding: 20px;
     box-sizing: border-box;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    height: 100vh;
+    
+ }
+ .wrapperHeroImage{
     display: flex;
     justify-content: space-between;
-    margin-top: 170px;
-
-}
-.containerHero{
-    width:  506px;
-}
+    gap: 100px;
+    min-height: calc(100vh - 96px);
+    align-items: center;
+    /* margin-top: calc(100vh - 96px); */
+ }
 
 .containerHero h1{
-    margin-top: 0;
     color: #21243D;
     font-weight: 700;
     font-size: 44px;
     line-height: 60px;
+    margin-bottom: 25px;
 }
-.containerHero p{   
-    width: 497px;
+.containerHero p{  
     font-weight: 400;
     font-size: 16px;
     line-height: 23.5px;
     color: #21243D;
-    margin-bottom: 35px;
+    margin-bottom: 25px;
 }
 .btnDownload{
     box-sizing: border-box;
@@ -88,8 +101,10 @@ body{
     background-color: #FF6464;
 }
 .btnDownload:hover {
-    background-color: rgba(255, 150, 150, 1); 
-    color: #333333;
+    background-color: rgb(253, 250, 250); 
+    color: #000000;
+    border: 1px solid#FF6464;
+    ;
 }
 
 .containerImage img{
@@ -106,26 +121,30 @@ body{
 }
 
 
-.postNav ul{
+.postNav{
     display: flex;
     margin: 0 auto;
     justify-content: space-between;
     width: 1170px;
     list-style: none;
 }
-ul:nth-child(1){
+.postNav h3{
     padding-left: 0;
     color: #21243D;
     font-size: 22px;
     line-height: 60px;
     font-weight: 400;
 }
-.postNav ul:nth-last-child(1) a{
+
+.postNav h3 a{
     text-decoration: none;
     color: #00A8CC;
     font-size:16px;
     font-weight:400;
     line-height: 23.5px;
+}
+.postNav h3 a:hover{
+    color: blue;
 }
 
 /* wrapperCards */
@@ -134,7 +153,7 @@ ul:nth-child(1){
     width: 1170px;
     margin: 0 auto;
     gap: 20px;
-    padding: 20px;
+    margin-bottom: 25px;
 }
 .wrapperCards a{
     text-decoration: none;
@@ -152,8 +171,6 @@ ul:nth-child(1){
     transition: box-shadow 0.3s ease, transform 0.2s ease;
 }
 .card h3{
-    /* width: 374px; */
-    /* height: 85px; */
     font-weight: 700;
     font-size: 26px;
     line-height: 38.19px;
@@ -175,8 +192,6 @@ ul:nth-child(1){
     font-weight: 400;
 }
 .card p{
-    /* width: 368px; */
-    /* height: 117px; */
     color: #21243D;
     font-weight: 400px;
     font-size: 16px;
@@ -184,12 +199,7 @@ ul:nth-child(1){
 }
 
 /* fetured Works */
-.feturedW{
-    width: 1170px;
-    height: 100vh;
-    margin: 0 auto;
-    background-color: #ffff;
-}
+
 
 .feturedW h2{
     font-size: 22px;
@@ -199,35 +209,36 @@ ul:nth-child(1){
 }
 
 .wrapperContainer{
-    width: 1170px;
     display: flex;
     gap: 50px;
-   align-items: center;
-   border-bottom: 1px solid #E0E0E0;
+    align-items: center;
+    border-bottom: 1px solid #E0E0E0;
     
 }
+.image {
+    min-width: 246px;
+}
 .image img{
-    width: 246px;
-    height: 180px;
+    width: 100%;
     border-radius: 6px;
 }
 
 .content a{
     text-decoration: none;
 }
-.content h1{
+.content h5{
     font-size: 30px;
     line-height: 44.06px;
     font-weight: 700;
     color: #21243D;
-    margin-bottom: 0;
+    margin-bottom: 16px;
 }
 
-        
-.content .category{
+.category{
     display: flex;
     align-items: center;
     gap: 35px;
+    margin-bottom: 34px;
 }
 .category .date{
     width: 62px;
@@ -255,25 +266,25 @@ ul:nth-child(1){
     line-height: 23.5px;
 
 }
+/* footer section */
 
 footer{
-    width: 1170px;
-    height: 182px;
-    margin: 0 auto;
-    display: block;
-    
-
+    padding: 20px;
 }
 
 .footerSection{
-
+    display: flex;
    justify-content: center;
    gap: 35px;
    margin-bottom:20px;
 }
+
+.footerSection img:hover{
+    /* transition: transform 0.3s ease; */
+    transform: scale(1.2);
+}
+
 footer p{
-    width: 1170px;
-    margin: 0 auto;
     text-align: center;
     color: #21243D;
     font-size: 14px;
@@ -286,17 +297,24 @@ footer p{
 
 @media (max-width:768px){
     body{
-        background-color: #00A8CC;
+       
+    }
+    .container{
         width: 100%;
     }
 
-    .header{
+    .hamburger{
+        display: block; 
+        float: right;
+    }
+
+    .wrapperNavHead{
         display: none;
-        
         justify-content: space-between;
         width: 768px;
         height: 35px;
     }
+
     .header ul li{
         list-style: none;
         margin-left: 10px; 
@@ -322,8 +340,7 @@ footer p{
         margin-bottom: 70px;
     }
 
-    .containerHero p{   
-        width: 358px;
+    .containerHero p{  
         text-align: center;
         font-weight: 400;
         font-size: 16px;
@@ -336,14 +353,14 @@ footer p{
         width: 100%;
         flex-direction: column;
     }
-    .postNav ul:nth-last-child(1) a{
-        display: none;
-    }
-    .postNav ul:nth-last-child(1):nth-child(1){
+    
+    .postNav {
         width: 100%;
         display: flex;
         justify-content: center;
-      
+    }
+    .postNav h3 a{
+        display: none;
     }
    
    
@@ -359,8 +376,7 @@ footer p{
         flex-direction: column;
         
     }
-    .card{
-        
+    .card{ 
         max-width: 100%;
     }
 
@@ -372,14 +388,20 @@ footer p{
 
 
     .wrapperContainer{
-        width: 768px;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-    }
-    .image img {
+        height: fit-content;
+        gap: 20px;
         width: 100%;
+        margin-bottom: 50px;    
+        display: flex;
+        flex-direction: column;   
+    }
+    .image{
+        width: 100%;
+    }
+
+    .image img {
+        /* align-items: center; */
+        /* width: 100%; */
     }
     .content{
        align-items: center;
