@@ -64,40 +64,43 @@
             </div>
           </div>
         </div>
+        <div class="hamburger logoHamburger">
+          <div class="ham"><img src="./images/menu.png" alt="" /></div>
+          <div class="log"><img src="./images/logo.png" alt="" /></div>
+        </div>
       </div>
     </header>
 
     <section class="hero">
-      <div class="leftContent">
-        <div class="container">
-          <div class="wrapperHero">
-            <h4>
-              <img src="./images/heroLogo.png" alt="heroLogo" />Hair Salon,
-              Masseuse, Beauty Salon
-            </h4>
-            <h1>Find a service close to you</h1>
-            <p>
-              There are many variation of passages are Ipsum available, majority
-              have suffered alteration in some form.
-            </p>
-            <div class="formContent">
-              <div class="wrapInput">
-                <label for="serviceName">Service Name</label>
-                <div class="iconWrap">
-                  <input type="text" placeholder="Book your services..." />
-                  <img src="./images/Vector (2).png" alt="" />
-                </div>
+      <div class="leftContent"></div>
+      <div class="container">
+        <div class="wrapperHero">
+          <h4>
+            <img src="./images/heroLogo.png" alt="heroLogo" />Hair Salon,
+            Masseuse, Beauty Salon
+          </h4>
+          <h1>Find a service close to you</h1>
+          <p>
+            There are many variation of passages are Ipsum available, majority
+            have suffered alteration in some form.
+          </p>
+          <div class="formContent">
+            <div class="wrapInput">
+              <label for="serviceName">Service Name</label>
+              <div class="iconWrap">
+                <input type="text" placeholder="Book your services..." />
+                <img src="./images/Vector (2).png" alt="" />
               </div>
-              <div class="wrapInput">
-                <label for="addess">Address</label>
-                <div class="iconWrap">
-                  <input type="text" placeholder="Where" />
-                  <img src="./images/location.png" alt="" />
-                </div>
+            </div>
+            <div class="wrapInput">
+              <label for="addess">Address</label>
+              <div class="iconWrap">
+                <input type="text" placeholder="Where" />
+                <img src="./images/location.png" alt="" />
               </div>
-              <div class="wrapInput btnSearch">
-                Search <img src="./images/search.png" alt="" />
-              </div>
+            </div>
+            <div class="wrapInput btnSearch">
+              Search <img src="./images/search.png" alt="" />
             </div>
           </div>
         </div>
@@ -367,11 +370,11 @@
             <div class="cardMiddle">
               <h3>Explore</h3>
               <ul>
-                <li>Home</li>
-                <li>About Us</li>
-                <li>Services</li>
-                <li>Blog</li>
-                <li>Contact Us</li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#Aboutus">About Us</a></li>
+                <li><a href="#Services">Services</a></li>
+                <li><a href="#Blog">Blog</a></li>
+                <li><a href="ContactUs">Contact Us</a></li>
               </ul>
             </div>
             <div class="cardMiddle">
@@ -421,16 +424,7 @@
         dots: true,
         slidesToShow: 6,
         slidesToScroll: 1,
-        responsive: [
-          {
-            breakpoint: 768,
-            settings: {
-              slidesToShow: 3,
-              slidesToScroll: 1,
-              initialSlide: 3,
-            },
-          },
-        ],
+        responsive: [{ breakpoint: 768, settings: { slidesToShow: 3 } }],
         prevArrow: $(".slickPrev"),
         nextArrow: $(".slickNext"),
       });
