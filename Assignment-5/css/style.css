@@ -20,9 +20,16 @@ li {
     list-style: none;
 }
 
+.navBar {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    justify-content: space-around;
+}
 
-.navBar li a {
-    color: #FFFFFF;
+
+.navUl li a {
+    color: #FFFF;
     font-size: 14px;
     line-height: 24px;
     font-weight: 600;
@@ -32,14 +39,15 @@ li {
     color: black;
 }
 
+
 a:hover {
     color: black;
 
 }
 
-.toggler {
-    background-color: #FFFFFF;
-}
+.navbar-toggler{
+    z-index: 4;
+    }
 
 .arrowIcon {
     width: 12px;
@@ -47,7 +55,11 @@ a:hover {
     align-self: flex-start;
 }
 
-
+.wraplogin {
+    gap: 45px;
+    display: flex;
+    align-items: center;
+}
 
 .login {
     color: #FFFFFF;
@@ -62,7 +74,6 @@ a:hover {
 }
 
 .btnMember {
-    gap: 5px;
     color: #FFFFFF;
     font-size: 14px;
     line-height: 22px;
@@ -71,8 +82,14 @@ a:hover {
     padding: 15px 40px;
     border-radius: 5px;
     border: none;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
 
+.btnMember:hover{
+    background-color: #3082b2;
 }
 
 .hero {
@@ -81,7 +98,7 @@ a:hover {
     background-image: url(../images/hero-cover.1.jpg);
     background-size: cover;
     position: relative;
-    margin-top: -102px;
+    margin-top: -112px;
 }
 
 .leftContent {
@@ -389,7 +406,6 @@ h3 {
 }
 
 .bookBtn {
-    gap: 5px;
     color: #FFFFFF;
     font-size: 14px;
     line-height: 22px;
@@ -412,13 +428,34 @@ h3 {
 
 .consulting {
     background-color: #FAFAFA;
-    padding: 96px 0px;
+    /* padding: 96px 0px; */
 }
 
-/* .wrapContact{
-    padding-top: 40px;
-    padding-bottom: 40px;
-} */
+.wrapConsult {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px auto;
+}
+
+.btnContact {
+    color: #FFFFFF;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 700;
+    background-color: #23A6F0;
+    border-radius: 5px;
+    border: none;
+    display: inline-block;
+    padding: 15px 40px;
+}
+
+.btnContact:hover {
+    color: #FFFFFF;
+    background-color: #54b8f2;
+
+}
 
 .consulting p {
     color: #737373;
@@ -502,28 +539,66 @@ li a {
 
 
 @media (max-width:992px) {
-    .navbar-collapse.show {
+    .header{
         background-color: #252B42;
     }
 
-    .btnMember {
-        display: none;
-    }
-
-}
-
-@media (max-width:768px) {
-
-
-    .btnMember {
+    .wraplogin {
         display: none;
     }
 
     /* hero */
+
+
+    .hero{
+        margin-top: 0;
+    }
+
+    .navUl li a {
+        color: #FFFF;
+        font-size: 30px;
+        line-height: 45px;
+        font-weight: 400;
+    }
+
+    .togglerBtn{
+        background-color: white;
+        border: 1px solid black;
+    }
+
+} 
+
+
+@media (max-width:768px) {
+
+
+    .header{
+        background-color: #252B42;
+    }
+
+    .wraplogin {
+        display: none;
+    }
+
+    /* hero */
+
+
+    .hero{
+        margin-top: 0;
+    }
+
+
+
+    .navUl li a {
+        color: #FFFF;
+        font-size: 30px;
+        line-height: 45px;
+        font-weight: 400;
+    }
+
     .heroContent {
         align-items: center;
         justify-content: center;
-
     }
 
     .heroContent h1 {
@@ -534,7 +609,8 @@ li a {
         font-weight: 700;
         margin-bottom: 32px;
     }
-    .heroContent p{
+
+    .heroContent p {
         text-align: center;
     }
 
@@ -561,9 +637,6 @@ li a {
 
 
     /* form content */
-    .contactForm {
-        padding: 96px 25px;
-    }
 
     .formCustom {
         display: flex;
@@ -573,6 +646,12 @@ li a {
 
     .bookBtn {
         padding: 15px 75px;
+    }
+
+    .wrapConsult {
+        flex-direction: column;
+        align-items: center;
+        margin: 40px auto;
     }
 
     /* footer bottom */

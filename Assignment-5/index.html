@@ -29,7 +29,7 @@
             <img src="./images/BrandName.png" alt="Brand Logo" />
           </a>
           <button
-            class="navbar-toggler"
+            class="navbar-toggler togglerBtn"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNav"
@@ -40,8 +40,8 @@
             <span class="navbar-toggler-icon"></span>
           </button>
 
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mx-auto w-100 navBar">
+          <div class="collapse navbar-collapse navBar" id="navbarNav">
+            <ul class="navbar-nav mx-auto navUl">
               <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="#">Home</a>
               </li>
@@ -55,14 +55,12 @@
                 <a class="nav-link" href="#">Contact</a>
               </li>
             </ul>
-            <div class="d-flex align-items-center d-none d-lg-flex">
-              <button class="btn login">Login</button>
-              <button
-                class="btnMember d-flex align-items-center justify-content-center"
-              >
-                Become a member
-                <div class="arrowIcon">
-                  <img src="./images/rightArrow.png" alt="Arrow Icon" />
+            <div class="wraplogin">
+              <span><a class="nav-link login" href="#">Login</a></span>
+              <button class="btnMember">
+                <span>Become a member</span>
+                <div>
+                  <img src="./images/rightArrow.png" alt="" />
                 </div>
               </button>
             </div>
@@ -70,6 +68,53 @@
         </nav>
       </div>
     </header>
+    <!-- <header>
+      <nav class="navbar navbar-expand-lg text-white">
+        <div class="container navContainer">
+          <a class="navbar-brand text-white brandName" href="#">BrandName</a>
+          <button
+            class="navbar-toggler togglerBtn"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse navBar" id="navbarNav">
+            <ul class="navbar-nav d-flex navItems">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Product</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+            </ul>
+
+            <div class="login">
+              <span><a class="nav-link" href="#">Login</a></span>
+              <button
+                class="btn d-flex align-items-center text-white becomeMember"
+              >
+                <span>Become a member</span>
+                <div>
+                  <img src="./images/icn arrow-right .icn-xs.png" alt="" />
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header> -->
 
     <section class="hero">
       <div class="leftContent"></div>
@@ -441,13 +486,13 @@ Message</textarea
 
     <section class="consulting">
       <div class="container">
-        <div class="row d-flex align-items-center">
-          <div class="col-md-10 col-sm-12">
+        <div class="wrapConsult">
+          <div class="content">
             <h4>Consulting Agency For Your Business</h4>
             <p>the quick fox jumps over the lazy dog</p>
           </div>
-          <div class="col-md-2 col-sm-12">
-            <button class="bookBtn">Contact Us</button>
+          <div class="btnConsult">
+            <button class="btnContact">Contact Us</button>
           </div>
         </div>
       </div>
