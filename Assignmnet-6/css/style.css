@@ -440,6 +440,8 @@ h3 {
     background-color: #ffff;
     border-radius: 46px;
     padding: 55px;
+    gap: 45px;
+
 }
 
 div.col-md-4 {
